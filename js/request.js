@@ -6,6 +6,4 @@ const getPuzzle = async wordCount => {
     }else{
         throw new Error("unable to get puzzle");
     }
-
-    
 }
