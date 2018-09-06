@@ -1,3 +1,5 @@
+import Hangman from "./hangman"
+import getPuzzle from "./request"
 const puzzleElement = document.querySelector(".puzzle");
 const guessesElement = document.querySelector("#guesses");
 let game1;
