@@ -1,1 +1,1 @@
-# Hangman-project
+# boilerplate
