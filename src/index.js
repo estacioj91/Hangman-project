@@ -29,7 +29,6 @@ const render = () => {
     });
     guessedLettersElement.innerHTML = "";
     game1.guessedLetters.forEach(letter => {
-        console.log(letter);
         if (letter != "") {
             const guessedletter = document.createElement("span");
             guessedletter.textContent = letter;

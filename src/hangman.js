@@ -49,6 +49,9 @@ class Hangman {
             this.guessedLetters.push(guess);
         }
         if (isUnique && isBadGuess) {
+            let count = (5 - (this.remainingGuesses - 1));
+            console.log(count);
+            document.querySelector(".img-src").src = "./assets/hangman-" + count + ".png";
             this.remainingGuesses--;
         }
         this.calculateStatus();
