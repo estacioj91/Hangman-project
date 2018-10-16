@@ -54,4 +54,7 @@ class Hangman {
         this.calculateStatus();
     }
 }
-export {Hangman as default}
+export {
+    Hangman as
+    default
+}
