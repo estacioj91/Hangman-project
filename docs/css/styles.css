@@ -56,3 +56,14 @@ p {
 .button:hover {
     background: #5F3A87;
 }
+
+.guessed {
+    margin: 5% 0;
+}
+
+.guessed-letters {
+    border-style: solid;
+    border-color: white;
+    border-width: 2px;
+    width: 50%;
+}
