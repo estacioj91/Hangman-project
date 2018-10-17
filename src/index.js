@@ -3,8 +3,30 @@ import getPuzzle from "./request"
 const puzzleElement = document.querySelector(".puzzle");
 const guessesElement = document.querySelector("#guesses");
 const guessedLettersElement = document.querySelector(".guessed-letters");
+const easy = document.querySelector("#easy");
+const medium = document.querySelector("#medium");
+const hard = document.querySelector("#hard");
+const impossible = document.querySelector("#impossible");
+var wordCount = "1"
 let game1;
 
+
+easy.addEventListener("click", (event) => {
+    wordCount = "1";
+    startGame();
+})
+medium.addEventListener("click", (event) => {
+    wordCount = "2";
+    startGame();
+})
+hard.addEventListener("click", (event) => {
+    wordCount = "3";
+    startGame();
+})
+impossible.addEventListener("click", (event) => {
+    wordCount = "4";
+    startGame();
+})
 window.addEventListener("keypress", (event) => {
     if (event.charCode != 32) {
         const guess = String.fromCharCode(event.charCode);
@@ -16,7 +38,7 @@ window.addEventListener("keypress", (event) => {
 })
 
 const startGame = async () => {
-    const puzzle = await getPuzzle("3");
+    const puzzle = await getPuzzle(wordCount);
     game1 = new Hangman(puzzle, 5);
     render();
 }
