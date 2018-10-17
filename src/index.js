@@ -40,6 +40,7 @@ window.addEventListener("keypress", (event) => {
 const startGame = async () => {
     const puzzle = await getPuzzle(wordCount);
     game1 = new Hangman(puzzle, 5);
+    document.querySelector(".img-src").src = "./assets/hangman-" + 0 + ".png";
     render();
 }
 const render = () => {
