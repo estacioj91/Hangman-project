@@ -14,7 +14,7 @@ window.addEventListener("keypress", (event) => {
 })
 
 const startGame = async () => {
-    const puzzle = await getPuzzle("2");
+    const puzzle = await getPuzzle("3");
     game1 = new Hangman(puzzle, 5);
     render();
 }
@@ -23,9 +23,16 @@ const render = () => {
     guessesElement.textContent = game1.statusMessage
 
     game1.puzzle.split("").forEach((letter) => {
-        const letterElement = document.createElement("span");
-        letterElement.textContent = letter;
-        puzzleElement.appendChild(letterElement);
+        if (letter != " ") {
+            const letterElement = document.createElement("span");
+            letterElement.textContent = letter;
+            puzzleElement.appendChild(letterElement);
+        } else {
+            const letterElement = document.createElement("div");
+            letterElement.classList.add("divider");
+            letterElement.textContent = letter;
+            puzzleElement.appendChild(letterElement);
+        }
     });
     guessedLettersElement.innerHTML = "";
     game1.guessedLetters.forEach(letter => {
