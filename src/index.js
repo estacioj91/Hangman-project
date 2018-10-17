@@ -30,7 +30,6 @@ impossible.addEventListener("click", (event) => {
 window.addEventListener("keypress", (event) => {
     if (event.charCode != 32) {
         const guess = String.fromCharCode(event.charCode);
-        document.querySelector("#mobile").blur();
         document.querySelector("#mobile").value = "";
         game1.makeGuess(guess);
         render();
