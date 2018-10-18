@@ -59,7 +59,8 @@ p {
 }
 
 .guessed {
-    margin: 5% 0;
+    margin: 2% 0;
+    text-align: center;
 }
 
 .guessed-letters {
@@ -67,10 +68,12 @@ p {
     border-color: white;
     border-width: 2px;
     width: 50%;
+    margin-bottom: 2.5%;
+    margin-left: 25%;
 }
 
 .hangman-image {
-    margin: 10% 0%;
+    margin: 3% 0%;
     display: flex;
     justify-content: space-between;
 }
