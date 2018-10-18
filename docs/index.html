@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Hangman</title>
     <link rel="stylesheet" type="text/css" href="./css/styles.css">
@@ -20,12 +20,10 @@
             <button id="impossible" class="button button-difficulty">Impossible</button>
         </div>
         <div class="hangman-image mobile-align">
-            <img class="img-src" src="./assets/hangman-0.png" alt="hangman image" heigh="250px" width="250px">
+            <img class="img-src" src="./assets/hangman-0.png" alt="hangman image" heigh="250px" width="200px">
+            <input class="mobile-only" id="mobile" type="text">
         </div>
         <div class="puzzle">
-        </div>
-        <div class="mobile-only ">
-            <input id="mobile" type="text">
         </div>
         <div class="mobile-align">
             <p id="guesses"></p>

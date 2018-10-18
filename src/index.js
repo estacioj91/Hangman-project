@@ -27,13 +27,11 @@ impossible.addEventListener("click", (event) => {
     wordCount = "4";
     startGame();
 })
-document.querySelector("#mobile").blur();
 window.addEventListener("keypress", (event) => {
     if (event.charCode != 32) {
         const guess = String.fromCharCode(event.charCode);
         document.querySelector("#mobile").value = "";
         game1.makeGuess(guess);
-        document.querySelector("#mobile").blur();
         render();
     }
 })

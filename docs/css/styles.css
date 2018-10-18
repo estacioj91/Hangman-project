@@ -70,12 +70,20 @@ p {
 }
 
 .hangman-image {
-    margin: 0% 0%;
+    margin: 10% 0%;
 }
 
 .mobile-only {
-    display: block;
-    margin-bottom: 5%;
+    display: inline-block;
+    width: 40px;
+}
+
+#mobile {
+    display: inline-block;
+    width: 40px;
+    vertical-align: top;
+    margin-top: 25%;
+    margin-left: 15%;
 }
 
 .margin {
@@ -91,6 +99,7 @@ p {
 
 .button-container {
     padding: 15px;
+    padding-left: 0;
     display: flex;
     justify-content: space-between;
 }
@@ -128,5 +137,9 @@ p {
         display: block;
         margin-left: none;
         margin-right: none;
+    }
+
+    #mobile {
+        display: none;
     }
 }
