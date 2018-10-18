@@ -28,7 +28,7 @@ span {
     margin: 0 .1rem;
     text-align: center;
     text-transform: uppercase;
-    width: 2.4rem;
+    width: 1.8rem;
 }
 
 p {
@@ -38,8 +38,8 @@ p {
 
 .puzzle {
     display: flex;
-    margin-bottom: 3rem;
     flex-wrap: wrap;
+    margin-bottom: 3rem;
 }
 
 .button {
@@ -203,5 +203,9 @@ p {
 
     body {
         min-height: 100vh;
+    }
+
+    span {
+        width: 2.4rem;
     }
 }
