@@ -38,7 +38,7 @@ p {
 
 .puzzle {
     display: flex;
-    margin-bottom: 4.8rem;
+    margin-bottom: 3rem;
     flex-wrap: wrap;
 }
 
@@ -100,8 +100,9 @@ p {
 }
 
 .button-container {
-    padding: 15px;
+    padding: 10px;
     padding-left: 0;
+    padding-right: 0;
     display: flex;
     justify-content: space-between;
 }
@@ -128,12 +129,31 @@ p {
 
 .key-style {
     flex-basis: 30%;
-    margin-bottom: 2%;
+    margin-bottom: 3%;
+    border-radius: 0px;
+    text-decoration: none;
+    background: transparent;
+    border: solid;
+    border-color: white;
+    border-width: 1px;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+.key-style:hover {
+    background-color: white;
+    color: black;
 }
 
 .last-key-style {
     flex-basis: 48%;
 }
+
+.hangman-image>span {
+    border-bottom: none;
+}
+
 
 @media only screen and (min-width: 600px) {
     .mobile-only {
