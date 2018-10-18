@@ -46,13 +46,11 @@ for (let index = 0; index < 26; index++) {
     key.addEventListener("click", event => {
         if ((keyCode) != 32) {
             const guess = String.fromCharCode(keyCode);
-            console.log(guess);
             game1.makeGuess(guess);
             render();
         }
     })
     if (keyCode != 89 && keyCode != 90) {
-        console.log("else");
         key.classList.add("key-style");
     } else {
 
