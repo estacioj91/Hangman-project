@@ -41,8 +41,23 @@ window.addEventListener("keypress", (event) => {
 //adding keyboard and functionality
 for (let index = 0; index < 26; index++) {
     const key = document.createElement("button")
-    key.textContent = "a";
-    key.classList.add("key-style");
+    const keyCode = 65 + index;
+    key.textContent = String.fromCharCode(keyCode);
+    key.addEventListener("click", event => {
+        if ((keyCode) != 32) {
+            const guess = String.fromCharCode(keyCode);
+            console.log(guess);
+            game1.makeGuess(guess);
+            render();
+        }
+    })
+    if (keyCode != 89 && keyCode != 90) {
+        console.log("else");
+        key.classList.add("key-style");
+    } else {
+
+        key.classList.add("key-style", "last-key-style");
+    }
     keyboard.appendChild(key);
 }
 //
