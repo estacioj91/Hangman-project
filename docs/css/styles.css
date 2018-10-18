@@ -71,6 +71,8 @@ p {
 
 .hangman-image {
     margin: 10% 0%;
+    display: flex;
+    justify-content: space-between;
 }
 
 .mobile-only {
@@ -108,6 +110,27 @@ p {
     flex-basis: 23%;
 }
 
+.img-src {
+    height: 200px;
+    width: 150px !important;
+    flex-basis: 48%;
+}
+
+.keyboard-span {
+    flex-basis: 48%;
+}
+
+.keyboard {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.key-style {
+    flex-basis: 23%;
+    margin-bottom: 2%;
+}
+
 @media only screen and (min-width: 600px) {
     .mobile-only {
         margin-bottom: 5%;
@@ -117,7 +140,7 @@ p {
     .margin {
         margin-left: 5%;
         margin-right: 4%;
-        width: 100vh;
+
     }
 
     .puzzle {
@@ -135,11 +158,19 @@ p {
 
     .img-src {
         display: block;
-        margin-left: none;
+        margin-left: 1px;
         margin-right: none;
     }
 
     #mobile {
+        display: none;
+    }
+
+    .keyboard {
+        display: none;
+    }
+
+    .keyboard-span {
         display: none;
     }
 }

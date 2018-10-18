@@ -7,6 +7,7 @@ const easy = document.querySelector("#easy");
 const medium = document.querySelector("#medium");
 const hard = document.querySelector("#hard");
 const impossible = document.querySelector("#impossible");
+const keyboard = document.querySelector(".keyboard");
 var wordCount = "1"
 let game1;
 
@@ -27,6 +28,8 @@ impossible.addEventListener("click", (event) => {
     wordCount = "4";
     startGame();
 })
+
+// <input class="mobile-only" id="mobile" type="text">
 window.addEventListener("keypress", (event) => {
     if (event.charCode != 32) {
         const guess = String.fromCharCode(event.charCode);
@@ -35,7 +38,14 @@ window.addEventListener("keypress", (event) => {
         render();
     }
 })
-
+//adding keyboard and functionality
+for (let index = 0; index < 26; index++) {
+    const key = document.createElement("button")
+    key.textContent = "a";
+    key.classList.add("key-style");
+    keyboard.appendChild(key);
+}
+//
 const startGame = async () => {
     const puzzle = await getPuzzle(wordCount);
     game1 = new Hangman(puzzle, 5);
