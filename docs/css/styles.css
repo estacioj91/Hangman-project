@@ -208,4 +208,12 @@ p {
     span {
         width: 2.4rem;
     }
+
+    .guessed {
+        text-align: none;
+    }
+
+    .guessed-letters {
+        margin-left: 0;
+    }
 }
